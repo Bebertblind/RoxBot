@@ -6,6 +6,6 @@ client.on("ready", function () {
     console.log("Mon BOT est Connecté");
 })
 
-client.login("NzcwMzYxMjYyNjk3MzQ5MTQx.X5cc1Q.yI5N5YYHiRK79UNKwi8CE2Q6RTk");
+client.login("process.env.TOKEN");
 
 
