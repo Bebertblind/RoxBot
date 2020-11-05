@@ -6,6 +6,19 @@ client.on("ready", function () {
     console.log("Mon BOT est Connecté");
 })
 
+client.on('message', message => {
+  if (message.content === 'bonjour') {
+    message.reply('Bonjour Bienvenu sur le serveur 91M2')
+  }
+})
+
+client.on('guildMemberAdd', member => {
+  member.createDM().then(channel => {
+    return channel.send('Bienvenue sur le serveur 91M2' + member.displayName)
+  }).catch(console.error)
+  // On pourrait catch l'erreur autrement ici (l'utilisateur a peut être désactivé les MP)
+})
+
 client.login(process.env.TOKEN);
 
 
