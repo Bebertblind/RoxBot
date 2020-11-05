@@ -12,6 +12,18 @@ client.on('message', message => {
   }
 })
 
+client.on('message', message => {
+  if (message.content === 'jour') {
+    message.reply('Bonne journée sur le serveur 91M2')
+	   }
+})
+
+client.on('message', message => {
+  if (message.content === 'bye') {
+    message.reply('Bonne soirée et à demain')
+  }
+})
+
 client.on('guildMemberAdd', member => {
   member.createDM().then(channel => {
     return channel.send('Bienvenue sur le serveur 91M2' + member.displayName)
