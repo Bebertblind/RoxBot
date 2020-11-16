@@ -31,6 +31,12 @@ client.on('guildMemberAdd', member => {
   // On pourrait catch l'erreur autrement ici (l'utilisateur a peut être désactivé les MP)
 })
 
+client.on('message', message => {
+  if (message.content === 'maj') {
+    message.reply('On ecrit pas en MAJUSCULES svp,les majuscules = crier')
+  }
+})
+
 client.login(process.env.TOKEN);
 
 
